@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  color: #0ff;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.game-container {
+  position: relative;
+  width: 800px;
+  margin: 20px auto;
+  filter: drop-shadow(0 0 15px #0ff);
+}
+
+h1 {
+  text-align: center;
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+  animation: glow 2s infinite alternate;
+}
+
+#gameCanvas {
+  border: 2px solid #0ff;
+  background: radial-gradient(circle at 50% 0%, #001133, #000);
+  image-rendering: pixelated;   /* pentru look retro dacă vrei */
+  filter: contrast(1.1) brightness(1.05);
+}
+
+#ui {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 10px;
+}
+
+#score {
+  color: #ff0;
+  font-weight: bold;
+}
+
+button {
+  padding: 8px 16px;
+  background: #0ff;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px #0ff);
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px #0ff; }
+  to   { text-shadow: 0 0 25px #0ff, 0 0 40px #0ff; }
+}
